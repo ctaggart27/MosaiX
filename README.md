@@ -1,4 +1,4 @@
-# MosaiX
+# [MosaiX](/Users/christiantaggart/Desktop/MosaiX/public/images/requires/mainLogo.png)
 World Wide Pixel Art Database
 
 
