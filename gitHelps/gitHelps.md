@@ -17,7 +17,7 @@ _________________________________________
 ### GIT TEAM WORK FLOW (Same repo with collaborator branches)
 [By: tom-con](https://github.com/tom-con)
 
-#####  ◽ MUST ONLY BE DONE BY ONE TEAM/PERSON/PAIR AT ONCE
+#####  •  MUST ONLY BE DONE BY ONE TEAM/PERSON/PAIR AT ONCE
 
 1. Have one person setup the git repo on github
   -  Add collaborators
