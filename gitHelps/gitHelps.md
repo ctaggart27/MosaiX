@@ -1,23 +1,23 @@
 ### HOW TO PULL UPDATES TO PARENT VERSION OF REPO-YOU-FORKED-FROM
-#### 1. Clone your fork:
-    - git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
-#### 2. Add remote from original repository in your forked repository:
-  -   cd into/cloned/fork-repo
-  -  git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
+#### 1. Clone your fork: `git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git`
+   #### 2. Add remote from original repository in your forked repository:
+  - `$ cd into/cloned/fork-repo`
+  - `$ git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git`
     <!-- (tom-cons spritr Repo: https://github.com/tom-con/spritr.git) -->
-  -  git fetch upstream
+  - `$ git fetch upstream`
 
 #### 3. Updating your fork from original repo to keep up with their changes:
 
-   -  git pull upstream master
+   - `$ git pull upstream master`
 
 ![Alt text](Screen Shot 2017-04-14 at 8.51.45 AM.png?raw=true "Title")
 
 _________________________________________
 
 ### GIT TEAM WORK FLOW (Same repo with collaborator branches)
+[By: tom-con](https://github.com/tom-con)
 
-##### • MUST ONLY BE DONE BY ONE TEAM/PERSON/PAIR AT ONCE
+#####  ◽ MUST ONLY BE DONE BY ONE TEAM/PERSON/PAIR AT ONCE
 
 1. Have one person setup the git repo on github
   -  Add collaborators
@@ -25,19 +25,19 @@ _________________________________________
 3. Make stories
 4. Make issues(?)
 5. Do git workflow for issues/stories
-  1.  $ git pull
- 2.  $ git checkout -b {{BRANCH NAME}}
+  1. ` $ git pull`
+ 2.  `$ git checkout -b {{BRANCH NAME}}`
   3.  Fix issues/complete stories
- 4.  $ git add -A ((or specific files))
- 5.  $ git commit -m “Fixes the issue/completes the story  
-    - $ git checkout master
-    - $ git pull
-    - $ git checkout {{BRANCH NAME}}
-    - $ git rebase master
-    - $ git checkout master
-    - $ git merge {{BRANCH NAME}}
-    - $ git push origin master
-    - $ git branch -d {{BRANCH NAME}}
+ 4.  `$ git add -A ((or specific files))`
+ 5.  `$ git commit -m “Fixes the issue/completes the story"`  
+    - `$ git checkout master`
+    - `$ git pull`
+    - `$ git checkout {{BRANCH NAME}}`
+    - `$ git rebase master`
+    - `$ git checkout master`
+    - `$ git merge {{BRANCH NAME}}`
+    -` $ git push origin master`
+    - `$ git branch -d {{BRANCH NAME}}`
 
 This completes the entire cycle for a single feature fix.
 
