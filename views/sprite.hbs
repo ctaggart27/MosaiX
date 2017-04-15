@@ -40,7 +40,7 @@
                       </div>
                       <!-- WHERE I TOUCHED -->
 
-                      <a id="userProfile" class="currUser" href="profile/{{currentUser.id}}"><img height="32px" width="32px" src="{{currentUser.picture}}"></a>
+                      <a id="userProfile" class="currUser" href="/profile/{{currentUser.id}}"><img height="32px" width="32px" src="{{currentUser.picture}}"></a>
                   </form>
                 </div>
               </nav>
@@ -56,7 +56,7 @@
     <div class="col-md-2 sidebar-buttoms">
       <div class="my-profile-info">
           <a href="/profile/{{sprite.user_id}}"><h3>{{sprite.username}}</h3></a>
-        <img src="{{currentUser.picture}}" class="my-profile-img" alt="UserName">
+        <img src="{{thisSpriter.user_picture}}" class="my-profile-img" alt="UserName">
       </div>
     </div>
     <!-- Sidebar - END -->
@@ -106,7 +106,7 @@
             {{#each sprite.comments}}
             <tr>
               <!-- TRYING TO LINK TO USER PROF OF COMMENTER -->
-              <td><a href="/profile/{{author.id}}">{{this.author}} </a></td>
+              <td><a href="/profile/{{this.id}}">{{this.author}} </a></td>
 
               <div id="{{this.comment_id}}" class="{{this.author}}" data-id="{{this.comment_id}}">
               <td class="comment-text">{{this.content}}</td>

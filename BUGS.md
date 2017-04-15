@@ -41,7 +41,7 @@ Bugs on Heroku as of 4/14/2017
 
 
 #### ./profile/your_profile_id
-- [ ] Upload user Profile picture sometimes doesn't upload update to allow gifs
+- [ ] Upload user Profile picture sometimes doesn't upload update (gifs would be cool)
 
 #### Individual Sprite Page
   - [x] No Home button(user prof pic)
@@ -50,7 +50,7 @@ Bugs on Heroku as of 4/14/2017
   - [ ] Can't tell who has liked your sprite
 
 #### Individual Sprite Page (owner)
-  - [ ] No Home button(user prof pic)
+  - [x] No Home button(user prof pic)
   - [ ] Can't tell who has liked your sprite  
   - [ ] Can't Delete Sprites
   - [ ] Can't Edit Sprites
