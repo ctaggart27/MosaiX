@@ -371,3 +371,16 @@ td {
 }
 
 /* ==============  OAUTH STYLING ============== */
+
+
+
+
+
+/*==================== GAME ===================*/
+canvas {
+  display : relative;
+  margin : auto;
+  margin-top: -1100px;
+
+
+}

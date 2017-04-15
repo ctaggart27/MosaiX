@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sprite Sandbox</title>
+    <!-- MY Styling CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- MY Styling CSS -->
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+
+</head>
+<header>
+    <!-- Navigation - START -->
+    <div class="container navigation-block">
+        <div class="row">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid navigation">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom">{{log.text}}</button></a></li>
+                        </ul>
+                    </div>
+                    <form class="navbar-form navbar-right searchbox" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control transparent" placeholder="Search this site">
+                            <span class="input-group-btn">
+                          <button type="submit" class="btn btn-default search-button">
+                          <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            </span>
+                        </div>
+                        <!-- WHERE I TOUCHED -->
+                        <a class="currUser" href="/profile/{{currUser.id}}"><img height="32px" width="32px" src="{{currUser.picture}}"></a>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navigation - END -->
+</header>
+<hr>
+<body>
+  <div class="container query-content">
+    <!-- SIDEBAR -->
+    <div class="col-md-2 sidebar-buttoms">
+        <div class="my-profile-info">
+            <h3>{{currUser.username}}</h3>
+            <img src="{{currUser.picture}}" class="my-profile-img" alt="UserName">
+        </div>
+        <br><br>
+        <p>Followers: {{followers}}</p>
+        <table class=buttons>
+            <tr>
+                <td><button class="sidebar-buttom create-now"><a href="/piskel.html">Create</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/query/creations">My Creations</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/query/following">News Feed</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/query/trending">Trending</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/sprite">All Sprites</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/profile/{{user.id}}/settings">Settings</a></button></td>
+            </tr>
+            <tr>
+                <td><button class="sidebar-buttom"><a href="/game">Enter Game</a></button></td>
+            </tr>
+        </table>
+
+    </div>
+    <!-- Sidebar - END -->
+
+    <!-- PHASER CDN -->
+    <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.js"></script>
+
+
+
+
+
+<!-- CONTAINER END -->
+</div>
+</body>
+<!-- Footer - START -->
+<div class="container footer col-md-12">
+    <div class="row footer-row">
+        <div class="card">
+            <div class="card-block">
+                <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer - END -->
+
+
+
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!-- MY SCRIPT -->
+<script type="text/javascript" src="/gameJs/phaser1.js"></script>
+
+</html>

@@ -17,6 +17,7 @@ const create = require('./routes/create');
 const comments = require('./routes/comments');
 const followers = require('./routes/followers');
 const query = require('./routes/query');
+const game = require('./routes/game');
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use('/create', create);
 app.use('/comments', comments);
 app.use('/followers', followers);
 app.use('/query', query);
+app.use('/game', game);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

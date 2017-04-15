@@ -1,146 +1,144 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <!-- BOOTSTRAP Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <!-- MY Styling CSS -->
-  <link rel="stylesheet" href="../../stylesheets/style.css">
+    <meta charset="utf-8">
+    <title></title>
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- MY Styling CSS -->
+    <link rel="stylesheet" href="../../stylesheets/style.css">
 </head>
 
 <body>
-  <header>
-    <!-- Navigation - START -->
-          <div class="container navigation-block">
+    <header>
+        <!-- Navigation - START -->
+        <div class="container navigation-block">
             <div class="row">
-              <nav class="navbar navbar-default" role="navigation">
-                <div class="container-fluid navigation">
-                  <div class="navbar-header">
-                    <div class="navbar-brand">
-                      <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
-                    </div>
-                  </div>
-                  <div class="menu">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom">{{log.text}}</button></a></li>
-                    </ul>
-                  </div>
-                  <form class="navbar-form navbar-right searchbox" role="search">
-                      <div class="input-group">
-                          <input type="text" class="form-control transparent" placeholder="Search this site">
-                          <span class="input-group-btn">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid navigation">
+                        <div class="navbar-header">
+                            <div class="navbar-brand">
+                                <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom">{{log.text}}</button></a></li>
+                            </ul>
+                        </div>
+                        <form class="navbar-form navbar-right searchbox" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control transparent" placeholder="Search this site">
+                                <span class="input-group-btn">
                               <button type="submit" class="btn btn-default search-button">
                               <span class="glyphicon glyphicon-search"></span>
-                              </button>
-                          </span>
-                      </div>
-                      <!-- WHERE I TOUCHED -->
+                                </button>
+                                </span>
+                            </div>
+                            <!-- WHERE I TOUCHED -->
 
-                      <a id="userProfile" class="currUser" href="/profile/{{currentUser.id}}"><img height="32px" width="32px" src="{{currentUser.picture}}"></a>
-                  </form>
+                            <a id="userProfile" class="currUser" href="/profile/{{currentUser.id}}"><img height="32px" width="32px" src="{{currentUser.picture}}"></a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navigation - END -->
+    </header>
+
+    <hr>
+
+    <div class="container sprite-content">
+        <!-- Sidebar - START -->
+        <div class="col-md-2 sidebar-buttoms">
+            <div class="my-profile-info">
+                <a href="/profile/{{sprite.user_id}}"><h3>{{sprite.username}}</h3></a>
+                <img src="{{sprite.user_id.render_url}}" class="my-profile-img" alt="UserName">
+            </div>
+        </div>
+        <!-- Sidebar - END -->
+        <!-- Individual Sprite Content - START -->
+        <div class="row col-md-10">
+            <div class="col-md-10 sprite-title">
+                <h1 class="left-title">{{sprite.name}}    <div id="editBox">
+          </div>
+          <a href="/profile/{{sprite.user_id}}"><span class="right-title pull-right">by {{sprite.username}}</span></a></h1>
+
+            </div>
+            <br>
+        </div>
+        <div class="row col-md-10 sprite-info transparent">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 sprite">
+                <div class="col-sm-6 col-md-8 col-md-offset-2">
+                    <div class="card">
+                        <div class="card-block sprite-description">
+                            <p class="card-text left">{{sprite.description}}</p>
+                        </div>
+                    </div>
                 </div>
-              </nav>
+                <div class="card">
+                    <img id="theSprite" class="img-fluid sprite-img img-thumbnail" src="{{sprite.render_url}}" data-id="{{sprite.id}}">
+
+                </div>
+                <div class="sprite-state">
+                    <p>
+                        <a href="/sprite/{{sprite.id}}/like"><img height="19px" src="../images/requires/Red_Heart.png"></a> {{sprite.likes}}</p>
+                    {{#each sprite.tags}}
+                        <a href="/query/{{this.tagname}}">{{this.tagname}}</a> <span class="removeTag" data-id="{{this.linkId}}">X</span>
+                    {{/each}}
+                    {{{tag}}}
+                </div>
             </div>
-          </div>
-          <!-- Navigation - END -->
-  </header>
 
-  <hr>
+        </div>
+        <!-- Individual Sprite Content - END -->
+        <br>
+        <br>
 
-  <div class="container sprite-content">
-    <!-- Sidebar - START -->
-    <div class="col-md-2 sidebar-buttoms">
-      <div class="my-profile-info">
-          <a href="/profile/{{sprite.user_id}}"><h3>{{sprite.username}}</h3></a>
-        <img src="{{thisSpriter.user_picture}}" class="my-profile-img" alt="UserName">
-      </div>
-    </div>
-    <!-- Sidebar - END -->
-    <!-- Individual Sprite Content - START -->
-    <div class="row col-md-10">
-      <div class="col-md-10 sprite-title">
-        <h1 class="left-title">{{sprite.name}}    <div id="editBox">
-          </div> <a href="/profile/{{sprite.user_id}}"><span class="right-title pull-right">by {{sprite.username}}</span></a></h1>
+        <!-- Individual Sprite Comment - START -->
+        <div class="row col-md-10">
+            <div class="col-sm-6 col-md-8 col-md-offset-2 comment-info">
+                <div class="comment-section">
+                    {{{comment}}}
+                    <table class="comment-table">
+                        <tbody>
+                            {{#each sprite.comments}}
+                                <tr>
+                                    <!-- TRYING TO LINK TO USER PROF OF COMMENTER -->
+                                    <td><a href="/profile/{{this.id}}">{{this.author}} </a></td>
 
-      </div>
-      <br>
-    </div>
-    <div class="row col-md-10 sprite-info transparent">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 sprite">
-          <div class="col-sm-6 col-md-8 col-md-offset-2">
-            <div class="card">
-              <div class="card-block sprite-description">
-              <p class="card-text left">{{sprite.description}}</p>
-              </div>
-            </div>
-          </div>
-            <div class="card">
-                <img id="theSprite" class="img-fluid sprite-img img-thumbnail" src="{{sprite.render_url}}" data-id="{{sprite.id}}">
+                                    <div id="{{this.comment_id}}" class="{{this.author}}" data-id="{{this.comment_id}}">
+                                        <td class="comment-text">{{this.content}}</td>
+                                    </div>
+                                </tr>
+                            {{/each}}
 
-            </div>
-            <div class="sprite-state">
-              <p><a href="/sprite/{{sprite.id}}/like"><img height="19px"src="../images/requires/Red_Heart.png"></a> {{sprite.likes}}</p>
-              {{#each sprite.tags}}
-                  <a href="/query/{{this.tagname}}">{{this.tagname}}</a> <span class="removeTag" data-id="{{this.linkId}}">X</span>
-              {{/each}}
-              {{{tag}}}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-
-  </div>
-  <!-- Individual Sprite Content - END -->
-  <br>
-  <br>
-
-  <!-- Individual Sprite Comment - START -->
-  <div class="row col-md-10">
-    <div class="col-sm-6 col-md-8 col-md-offset-2 comment-info">
-      <div class="comment-section">
-        {{{comment}}}
-        <table class="comment-table">
-          <tbody>
-            {{#each sprite.comments}}
-            <tr>
-              <!-- TRYING TO LINK TO USER PROF OF COMMENTER -->
-              <td><a href="/profile/{{this.id}}">{{this.author}} </a></td>
-
-              <div id="{{this.comment_id}}" class="{{this.author}}" data-id="{{this.comment_id}}">
-              <td class="comment-text">{{this.content}}</td>
-              </div>
-            </tr>
-            {{/each}}
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-</div>
-  <!-- Individual Sprite Comment - END -->
-  <!-- Footer - START -->
-  <div class="container footer col-md-12">
-    <div class="row footer-row">
-      <div class="card">
-        <div class="card-block">
-          <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
+        <!-- Individual Sprite Comment - END -->
+        <!-- Footer - START -->
+        <div class="container footer col-md-12">
+            <div class="row footer-row">
+                <div class="card">
+                    <div class="card-block">
+                        <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer - END -->
+        <!-- Footer - END -->
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<!-- BOOTSTRAP Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../javascripts/renderSprites.js">
-
-</script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- BOOTSTRAP Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../javascripts/renderSprites.js">
+        </script>
 </body>
 <!-- MY Javascripting -->
 <!-- <script src="./javascripts/sprite.js"></script> -->
