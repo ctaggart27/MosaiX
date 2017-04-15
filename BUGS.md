@@ -1,13 +1,16 @@
 Bugs on Heroku as of 4/14/2017
 
 #### ALL PAGES / General
-  - [ ] Fix "All Right Reserved" footer
-  - [ ] Add links in footer for (contact us etc)
-  - [ ] Add Messaging
-  - [ ] Notifications would be nice
-  - [ ] When user is deleted their sprites still render
-  - [ ] Better navigation would be nice (instead of a blurb with links thrown in buttons on nav bar would be nice)
-  - [ ] Search functionality (tags, username)
+  - [x] Fix "All Right Reserved" footer
+        Stuff Idk how to do yet
+      - [ ] Add links in footer for (contact us etc)
+      - [ ] Add Messaging
+      - [ ] Notifications would be nice
+      - [ ] When user is deleted their sprites still render
+      - [ ] Better navigation would be nice (instead of a blurb with links thrown in buttons on nav bar would be nice)
+      - [ ] Search functionality (tags, username)
+      - [ ] Admin
+      - [ ] View all users/ Recommended users to follow
 
 #### Comments
   - [ ] when commenters name is clicked it redirects to the blob img
@@ -28,20 +31,20 @@ Bugs on Heroku as of 4/14/2017
 - [ ] Google Auth
 - [ ] Search bar needs Styling (transparency & Magnifying glass added)
 - [ ] Logged in users should be redirected to their profile
-- [ ] "CREATE Anonymously"
-  - [ ] "JUST DO IT" button lacking functionality
+- [x] "CREATE Anonymously"
+- [x] "JUST DO IT" button lacking functionality
 
 #### Settings Page
-  - [ ] text fields need transparency
-  - [ ] No Home button(user prof pic)
-  - [ ] Choose file button needs styling (font, bg color)
+  - [x] text fields need transparency
+  - [x] No Home button(user prof pic)
+  - [ ] Choose file button needs styling (font, bg color)IDK if possible
 
 
 #### ./profile/your_profile_id
 - [ ] Upload user Profile picture sometimes doesn't upload update to allow gifs
 
 #### Individual Sprite Page
-  - [ ] No Home button(user prof pic)
+  - [x] No Home button(user prof pic)
   - [ ] currUser prof Pic shows up under sprite owners name
   - [ ] Heart color doesn't change is currUser has liked sprite
   - [ ] Can't tell who has liked your sprite

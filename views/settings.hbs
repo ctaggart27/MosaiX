@@ -18,111 +18,109 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Edit Settings</title>
-  <!-- BOOTSTRAP Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <!-- MY Styling CSS -->
-  <link rel="stylesheet" href="../../stylesheets/style.css">
+    <meta charset="utf-8">
+    <title>Edit Settings</title>
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- MY Styling CSS -->
+    <link rel="stylesheet" href="../../stylesheets/style.css">
 </head>
 
 <body>
-  <header>
-    <!-- Navigation - START -->
-      <div class="container navigation-block">
+    <header>
+        <!-- Navigation - START -->
+        <div class="container navigation-block">
             <div class="row">
-              <nav class="navbar navbar-default" role="navigation">
-                <div class="container-fluid navigation">
-                  <div class="navbar-header">
-                    <div class="navbar-brand">
-                      <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
-                    </div>
-                  </div>
-                  <div class="menu">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom">{{log.text}}</button></a></li>
-                    </ul>
-                  </div>
-                  <form class="navbar-form navbar-right searchbox" role="search">
-                      <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search this site">
-                          <span class="input-group-btn">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid navigation">
+                        <div class="navbar-header">
+                            <div class="navbar-brand">
+                                <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom">{{log.text}}</button></a></li>
+                            </ul>
+                        </div>
+                        <form class="navbar-form navbar-right searchbox" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control transparent" placeholder="Search this site">
+                                <span class="input-group-btn">
                               <button type="submit" class="btn btn-default search-button">
                               <span class="glyphicon glyphicon-search"></span>
-                              </button>
-                          </span>
-                      </div>
-                  </form>
-                </div>
-              </nav>
+                                </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
             </div>
-          </div>
-    <!-- Navigation - END -->
-  </header>
-
-  <hr>
-
-  <!-- Content - START -->
-  <div class="container setting-content">
-    <!-- Sidebar - START -->
-    <div class="col-md-2">
-      <div class="my-profile-info">
-          <a href="/profile/{{sprite.user_id}}"><h3>{{sprite.username}}</h3></a>
-        <img src="{{user.user_picture}}" class="my-profile-img" alt="UserName">
-      </div>
-    </div>
-    <!-- Sidebar - END -->
-    <!-- Setting - START -->
-    <br>
-    <div class="row col-md-10 setting-info transparent">
-      <br>
-      <h4>Change My Picture (200x200): </h4>
-      <br>
-      <form ref='uploadForm' id='uploadForm' action='/profile/{{user.id}}/settings/upload' method='post' encType="multipart/form-data">
-        <input type="file" name="picture_url" class="upload-image">
-        <br>
-        <button type="submit" name="update" class="setting-buttoms">Update</button>
-        <br>
-        <br>
-        <br>
-      </form>
-        <h4 class="card-title">My Summary: </h4>
-        <br>
-      <form>
-        <textarea class="card-text" rows="5" cols="30"></textarea>
-        <br>
-        <br>
-        <button id="save" data-id="{{user.id}}" class="setting-buttoms">Save</button>
-        |
-        <button id="delete" data-id="{{user.id}}" class="setting-buttoms">Delete Your Account?</button>
-      </form>
-      <button><a href="/profile/{{user.id}}">Back to profile</a></button>
-      <br><br>
-
-    </div>
-    <!-- Setting - START -->
-  </div>
-  <!-- Content - START -->
-
-  <!-- Footer - START -->
-  <div class="container footer col-md-12">
-    <div class="row footer-row">
-      <div class="card">
-        <div class="card-block">
-          <p class="copyright-block"><span class="copyright">&copy; MosaiX All right reserved.</span></p>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer - END -->
+        <!-- Navigation - END -->
+    </header>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<!-- BOOTSTRAP Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <hr>
+
+    <!-- Content - START -->
+    <div class="container setting-content">
+        <!-- Sidebar - START -->
+        <div class="col-md-2">
+            <div class="my-profile-info">
+                <a href="/profile/{{user.id}}"><h3>{{user.username}}</h3></a>
+                <img src="{{user.user_picture}}" class="my-profile-img" alt="UserName">
+            </div>
+        </div>
+        <!-- Sidebar - END -->
+        <!-- Setting - START -->
+        <br>
+        <div class="row col-md-10 setting-info transparent">
+            <br>
+            <h4>Change My Picture (200x200): </h4>
+            <br>
+            <form ref='uploadForm' id='uploadForm' action='/profile/{{user.id}}/settings/upload' method='post' encType="multipart/form-data">
+                <input type="file" name="picture_url" class="upload-image">
+                <br>
+                <button type="submit" name="update" class="setting-buttoms loginButtons">Update</button>
+                <br>
+                <br>
+                <br>
+            </form>
+            <h4 class="card-title">My Summary: </h4>
+            <br>
+            <form>
+                <textarea class="card-text transparent" rows="5" cols="30"></textarea>
+                <br>
+                <br>
+                <button id="save" data-id="{{user.id}}" class="setting-buttoms loginButtons">Save</button>
+                <button id="delete" data-id="{{user.id}}" class="setting-buttoms loginButtons">Delete Your Account?</button>
+            </form>
+            <br>
+            <button class='loginButtons'><a href="/profile/{{user.id}}">Back to profile</a></button>
+            <br><br>
+
+        </div>
+        <!-- Setting - START -->
+    </div>
+    <!-- Content - START -->
+
+    <!-- Footer - START -->
+    <div class="container footer col-md-12">
+        <div class="row footer-row">
+            <div class="card">
+                <div class="card-block">
+                    <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer - END -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 <!-- MY Javascripting -->
 <script src="/javascripts/settings.js"></script>

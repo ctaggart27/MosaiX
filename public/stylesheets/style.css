@@ -186,6 +186,15 @@ a:hover {
   text-decoration: none;
 }
 
+.loginButtons{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #7f0000;
+}
+
+.loginButtons:hover{
+  color: gold;
+}
+
 /* ============== QUERY STYLING & SPRITES ============== */
 .query-content {
   color: white;

@@ -2,231 +2,230 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <!-- BOOTSTRAP Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <!-- MY Styling CSS -->
-  <link rel="stylesheet" href="./stylesheets/style.css">
+    <meta charset="utf-8">
+    <title></title>
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- MY Styling CSS -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
 <body>
-  <header>
-    <!-- Navigation - START -->
-      <div class="container navigation-block">
+    <header>
+        <!-- Navigation - START -->
+        <div class="container navigation-block">
             <div class="row">
-              <nav class="navbar navbar-default" role="navigation">
-                <div class="container-fluid navigation">
-                  <div class="navbar-header">
-                    <div class="navbar-brand">
-                      <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
-                    </div>
-                  </div>
-                  <div class="menu">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom" >{{log.text}}</button></a></li>
-                    </ul>
-                  </div>
-                  <form class="navbar-form navbar-right searchbox" role="search">
-                      <div class="input-group">
-                          <input type="text" class="form-control transparent" placeholder="Search this site">
-                          <span class="input-group-btn">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid navigation">
+                        <div class="navbar-header">
+                            <div class="navbar-brand">
+                                <a href="/"><img src="/images/requires/mainLogo.png" class="logo" alt="MozaiX"></a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation"><a href="{{log.link}}"><button class="login-logout-buttom" >{{log.text}}</button></a></li>
+                            </ul>
+                        </div>
+                        <form class="navbar-form navbar-right searchbox" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control transparent" placeholder="Search this site">
+                                <span class="input-group-btn">
                               <button type="submit" class="btn btn-default search-button">
                               <span class="glyphicon glyphicon-search"></span>
-                              </button>
-                          </span>
-                      </div>
-                      <!-- WHERE I TOUCHED -->
-                      <a class="currUser" href="profile/{{currUser.id}}"><img height="32px" width="32px" src="{{currUser.picture}}"></a>
-                  </form>
-                </div>
-              </nav>
+                                </button>
+                                </span>
+                            </div>
+                            <!-- WHERE I TOUCHED -->
+
+                            <a id="userProfile" class="currUser" href="profile/{{currUser.id}}"><img height="32px" width="32px" src="{{currUser.picture}}"></a>
+                        </form>
+                    </div>
+                </nav>
             </div>
-          </div>
-          <!-- Navigation - END -->
-  </header>
+        </div>
+        <!-- Navigation - END -->
+    </header>
 
-  <hr>
-  <!-- Carousel - START -->
-  <section class="section-white">
+    <hr>
+    <!-- Carousel - START -->
+    <section class="section-white">
+        <div class="container">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <!--First slide-->
+                    <div class="item active">
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.0.id}}"><h4 class="spriteName">{{sprites.0.name}}</h4></a>
+                                <a href="/profile/{{sprites.0.user_id}}"><h5>by {{sprites.0.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.0.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.0.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.1.id}}"><h4 class="spriteName">{{sprites.1.name}}</h4></a>
+                                <a href="/profile/{{sprites.1.user_id}}"><h5>by {{sprites.1.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.1.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.1.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.2.id}}"><h4 class="spriteName">{{sprites.2.name}}</h4></a>
+                                <a href="/profile/{{sprites.2.user_id}}"><h5>by {{sprites.2.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.2.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.2.likes}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="item">
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.3.id}}"><h4 class="spriteName">{{sprites.3.name}}</h4></a>
+                                <a href="/profile/{{sprites.3.user_id}}"><h5>by {{sprites.3.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.3.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.3.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.4.id}}"><h4 class="spriteName">{{sprites.4.name}}</h4></a>
+                                <a href="/profile/{{sprites.4.user_id}}"><h5>by {{sprites.4.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.4.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.4.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.5.id}}"><h4 class="spriteName">{{sprites.5.name}}</h4></a>
+                                <a href="/profile/{{sprites.5.user_id}}"><h5>by {{sprites.5.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.5.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.5.likes}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Second slide-->
+
+                    <!--Third slide-->
+                    <div class="item">
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.6.id}}"><h4 class="spriteName">{{sprites.6.name}}</h4></a>
+                                <a href="/profile/{{sprites.6.user_id}}"><h5>by {{sprites.6.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.6.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.6.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.7.id}}"><h4 class="spriteName">{{sprites.7.name}}</h4></a>
+                                <a href="/profile/{{sprites.7.user_id}}"><h5>by {{sprites.7.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.7.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.7.likes}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 hidden-sm-down">
+                            <div class="card">
+                                <a href="/sprite/{{sprites.8.id}}"><h4 class="spriteName">{{sprites.8.name}}</h4></a>
+                                <a href="/profile/{{sprites.8.user_id}}"><h5>by {{sprites.8.username}}</h5></a>
+                                <img class="img-fluid carousel-img" src="{{sprites.8.render_url}}" alt="Card image cap">
+                                <p>Likes: {{sprites.8.likes}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Third slide-->
+
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel - END -->
+
+    <hr>
+
+    <!-- Button - START -->
+    <div class="container instant-create">
+        <div class="row">
+            <button id="create" type="button" class="btn btn-default navbar-btn create-now create-buttom transparent">Create Your Own</button>
+        </div>
+    </div>
+    <!-- Button - END -->
+
+    <!-- <br> -->
+
+    <!-- Features - START -->
     <div class="container">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-
-          <!--First slide-->
-          <div class="item active">
-
-              <div class="col-md-4">
-                  <div class="card">
-                    <a href="/sprite/{{sprites.0.id}}"><h4 class="spriteName">{{sprites.0.name}}</h4></a>
-                    <a href="/profile/{{sprites.0.user_id}}"><h5>by {{sprites.0.username}}</h5></a>
-                      <img class="img-fluid carousel-img" src="{{sprites.0.render_url}}" alt="Card image cap">
-                      <p>Likes: {{sprites.0.likes}}</p>
-                  </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.1.id}}"><h4 class="spriteName">{{sprites.1.name}}</h4></a>
-                  <a href="/profile/{{sprites.1.user_id}}"><h5>by {{sprites.1.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.1.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.1.likes}}</p>
+        <div class="row">
+            <div class="card">
+                <div class="card-block features">
+                    <h4 class="card-title left">Create 2D Sprites</h4>
+                    <p class="card-text left">Draw and perfect your own creations with the MosaiX <a href="/piskel.html" class="splash-span">pixel sprite editing suite</a>.</p>
+                    <h4 class="card-title right">Put them to use</h4>
+                    <p class="card-text right">Implement your 2D sprites in your own professional or personal projects - or try them out in our <a href="#" class="splash-span">render-zone</a>!</p>
+                    <h4 class="card-title left">Become part of the community</h4>
+                    <p class="card-text left"><a href="/login" class="splash-span">Join thousands of our members</a> who explore, share, and crate every day. Check out the <a href="/query/trending" class="splash-span">trending</a> and <a href="/query/trending" class="splash-span">latest</a>                        feeds, or search for something entirely different!</p>
                 </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.2.id}}"><h4 class="spriteName">{{sprites.2.name}}</h4></a>
-                  <a href="/profile/{{sprites.2.user_id}}"><h5>by {{sprites.2.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.2.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.2.likes}}</p>
-                </div>
-              </div>
-
-          </div>
-          <!--/.First slide-->
-
-          <!--Second slide-->
-          <div class="item">
-
-              <div class="col-md-4">
-                <div class="card">
-                  <a href="/sprite/{{sprites.3.id}}"><h4 class="spriteName">{{sprites.3.name}}</h4></a>
-                  <a href="/profile/{{sprites.3.user_id}}"><h5>by {{sprites.3.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.3.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.3.likes}}</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.4.id}}"><h4 class="spriteName">{{sprites.4.name}}</h4></a>
-                  <a href="/profile/{{sprites.4.user_id}}"><h5>by {{sprites.4.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.4.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.4.likes}}</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.5.id}}"><h4 class="spriteName">{{sprites.5.name}}</h4></a>
-                  <a href="/profile/{{sprites.5.user_id}}"><h5>by {{sprites.5.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.5.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.5.likes}}</p>
-                </div>
-              </div>
-
-          </div>
-          <!--/.Second slide-->
-
-          <!--Third slide-->
-          <div class="item">
-
-              <div class="col-md-4">
-                <div class="card">
-                  <a href="/sprite/{{sprites.6.id}}"><h4 class="spriteName">{{sprites.6.name}}</h4></a>
-                  <a href="/profile/{{sprites.6.user_id}}"><h5>by {{sprites.6.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.6.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.6.likes}}</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.7.id}}"><h4 class="spriteName">{{sprites.7.name}}</h4></a>
-                  <a href="/profile/{{sprites.7.user_id}}"><h5>by {{sprites.7.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.7.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.7.likes}}</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 hidden-sm-down">
-                <div class="card">
-                  <a href="/sprite/{{sprites.8.id}}"><h4 class="spriteName">{{sprites.8.name}}</h4></a>
-                  <a href="/profile/{{sprites.8.user_id}}"><h5>by {{sprites.8.username}}</h5></a>
-                    <img class="img-fluid carousel-img" src="{{sprites.8.render_url}}" alt="Card image cap">
-                    <p>Likes: {{sprites.8.likes}}</p>
-                </div>
-              </div>
-
-          </div>
-          <!--/.Third slide-->
-
+            </div>
         </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
     </div>
-  </section>
-  <!-- Carousel - END -->
+    <!-- Features - END -->
 
-  <hr>
-
-  <!-- Button - START -->
-  <div class="container instant-create">
-    <div class="row">
-      <button id="create" type="button" class="btn btn-default navbar-btn create-now create-buttom transparent">Create Your Own</button>
-    </div>
-  </div>
-  <!-- Button - END -->
-
-  <!-- <br> -->
-
-  <!-- Features - START -->
-  <div class="container">
-    <div class="row">
-      <div class="card">
-        <div class="card-block features">
-          <h4 class="card-title left">Create 2D Sprites</h4>
-          <p class="card-text left">Draw and perfect your own creations with the MosaiX <a href="/piskel.html" class="splash-span">pixel sprite editing suite</a>.</p>
-          <h4 class="card-title right">Put them to use</h4>
-          <p class="card-text right">Implement your 2D sprites in your own professional or personal projects - or try them out in our <a href="#" class="splash-span">render-zone</a>!</p>
-          <h4 class="card-title left">Become part of the community</h4>
-          <p class="card-text left"><a href="/login" class="splash-span">Join thousands of our members</a> who explore, share, and crate every day. Check out the <a href="/query/trending" class="splash-span">trending</a> and <a href="/query/trending" class="splash-span">latest</a> feeds, or search for something entirely different!</p>
+    <!-- Footer - START -->
+    <div class="container footer col-md-12">
+        <div class="row footer-row">
+            <div class="card">
+                <div class="card-block">
+                    <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Features - END -->
+    <!-- Footer - END -->
 
-  <!-- Footer - START -->
-  <div class="container footer col-md-12">
-    <div class="row footer-row">
-      <div class="card">
-        <div class="card-block">
-          <p class="copyright-block"><span class="copyright">&copy; MosaiX All right reserved.</span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer - END -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<!-- BOOTSTRAP Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../javascripts/index.js">
-</script>
-<script type="text/javascript" src="../javascripts/renderSprites.js">
-</script>
+    <!-- MY Javascripting -->
+    <script type="text/javascript" src="../javascripts/index.js">
+    </script>
+    <script type="text/javascript" src="../javascripts/renderSprites.js">
+    </script>
 </body>
-<!-- MY Javascripting -->
-<!-- <script src="./javascripts/index.js"></script> -->
 
 </html>

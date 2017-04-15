@@ -16,22 +16,22 @@
     <!-- BOOTSTRAP Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    }
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
 
-    function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function() {
-          $.ajax({
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function() {
+                $.ajax({
 
-          })
-        });
-    }
+                })
+            });
+        }
     </script>
 </head>
 
@@ -72,31 +72,34 @@
     <br><br><br>
 
     <!-- Collapsible - START -->
-    <div class="container log-method">
-        <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 log-block">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="container log-method ">
+
+        <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 log-block ">
+
+            <!-- IM FUCKING WITH THIS CSS (ADDED TRANSPARENT)-->
+            <div class="panel-group transparent" id="accordion" role="tablist" aria-multiselectable="true">
                 <!-- SIGN IN -->
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
+                <div class="panel panel-default transparent">
+                    <div class="panel-heading transparent" role="tab" id="headingOne">
                         <h4 class="panel-title">
               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Login</a>
             </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in user-action" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <form class="login-require" action="/login" method="post">
-                                <input type="text" name="username" placeholder="Your username...">
+                    <div  id="collapseOne" class="panel-collapse collapse in user-action" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body ">
+                            <form class="login-require " action="/login" method="post">
+                                <input class="transparent" type="text" name="username" placeholder="Your username...">
                                 <!-- </label> -->
                                 <br>
-                                <input type="password" name="password" placeholder="Your password...">
+                                <input class=" transparent" type="password" name="password" placeholder="Your password...">
                                 <!-- </label> -->
                                 <br>
 
                                 <br>
-                                <button type="submit">Login</button>
+                                <button class="loginButtons"  type="submit">Login</button>
                                 <br>
                                 <br>
-                                <div id="googleSign"class="g-signin2 col-md-offset-4" data-onsuccess="onSignIn"></div>
+                                <div id="googleSign" class="g-signin2 col-md-offset-4" data-onsuccess="onSignIn"></div>
                             </form>
 
                             <h4>{{error}}</h4>
@@ -104,7 +107,7 @@
                     </div>
                 </div>
                 <!-- MAKE USER -->
-                <div class="panel panel-default">
+                <div class="panel panel-default transparent">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Sign Up</a>
@@ -113,31 +116,31 @@
                     <div id="collapseTwo" class="panel-collapse collapse user-action" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <form class="signup-require" action="login/signup" method="post">
-                                <input type="text" name="email" placeholder="Your email...">
+                                <input class="transparent" type="text" name="email" placeholder="Your email...">
                                 <br>
-                                <input type="text" name="username" placeholder="Your username...">
+                                <input class="transparent" type="text" name="username" placeholder="Your username...">
                                 <br>
-                                <input type="password" name="password" placeholder="Your password...">
+                                <input class="transparent" type="password" name="password" placeholder="Your password...">
                                 <br>
-                                <input type="password" name="confirmPassword" placeholder="Confirm plassword...">
+                                <input class="transparent" type="password" name="confirmPassword" placeholder="Confirm plassword...">
                                 <br>
                                 <br>
-                                <button type="submit">Sign Up</button>
+                                <button class="loginButtons" type="submit">Sign Up</button>
                             </form>
                             <h4>{{error2}}</h4>
                         </div>
                     </div>
                 </div>
                 <!-- CREATE ANONYMOUS -->
-                <div class="panel panel-default">
+                <div class="panel panel-default transparent">
                     <div class="panel-heading" role="tab" id="headingThree">
                         <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CREATE Anonymously</a>
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CREATE ANONYMOUSLY</a>
             </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse user-action" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">
-                            <button type="submit">JUST DO IT</button>
+                            <button id="create" class="loginButtons" type="submit">JUST DO IT</button>
                         </div>
                     </div>
                 </div>
@@ -151,7 +154,7 @@
         <div class="row footer-row2">
             <div class="card">
                 <div class="card-block">
-                    <p class="copyright-block"><span class="copyright">&copy; MosaiX All right reserved.</span></p>
+                    <p class="copyright-block"><span class="copyright">&copy; MosaiX All rights reserved.</span></p>
                 </div>
             </div>
         </div>
@@ -160,4 +163,7 @@
 
 
 </body>
+<script src="/javascripts/index.js"></script>
+
+
 </html>
