@@ -1,12 +1,21 @@
-# MosaiX Test Suite 
+# MosaiX Test Suite
 
-### Features:
+## Features:
 
-** Ideas for ENV **
-1.  Choose scene / ENV(environment)
+##### Ideas for ENV
+
+1.  Choose scene / ENV / World (2D / 3D )
     - [ ] Drop down & logic to choose ENV
-    - [ ] Each Env has defined properties
-    - [ ] City, Desert, Forest, Jungle (?more)
+    - [ ] Render ENV choices in drop down
+      - _  Would a scroll  or carousel be better? _
+      - Desert
+      - City
+      - Forest
+      - Jungle
+      - Dark
+    - [ ] Each Env has unique properties
+      - Enemies, Light,
+
 
 
 - [ ] MosaiX creation suite
